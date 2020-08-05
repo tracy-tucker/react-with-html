@@ -3,7 +3,7 @@ class WelcomeBack extends React.Component {
         super(props);
         this.state = {
             name: 'J',
-            apppVersion: '1'
+            appVersion: '1'
         }
     }
 
@@ -12,11 +12,11 @@ class WelcomeBack extends React.Component {
             <>
                 <h2>Hello {this.state.name || 'Friend'}! Welcome Back.</h2>
                 {
-                    this.state.apppVersion && this.state.apppVersion < 2
+                    this.state.appVersion && this.state.appVersion < 2
                     ? <p>Your app is out of date. Please download the new version and take a look at all the new features.</p> 
                     : ''
                 }
-                <CoolButton customText={this.state.apppVersion && this.state.apppVersion < 2 ? 'Download v2' : 'Download'} />
+                <CoolButton customText={this.state.appVersion && this.state.appVersion < 2 ? 'Download v2' : 'Download'} />
             </>
         )
     }
